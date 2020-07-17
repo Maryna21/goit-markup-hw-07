@@ -1,0 +1,40 @@
+.work-section {
+  padding-top: 0;
+  @extend %container;
+  padding-bottom: 94px;
+}
+
+.work-list.list {
+  display: flex;
+}
+
+.cart-work {
+  width: 370px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.work-images {
+  position: relative;
+}
+
+.work-title-bg {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: $gradient;
+
+  .title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $primary-bg-color;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}

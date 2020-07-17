@@ -1,0 +1,43 @@
+.features {
+  @extend %container;
+}
+
+.features-title {
+  @extend %visually-hidden;
+}
+
+.features-list {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .item {
+    width: 270px;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.box-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $accent-bg-color;
+  margin-bottom: 30px;
+}
+
+.icon-feature {
+  width: 70px;
+  height: 70px;
+}
+
+.feature-subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}

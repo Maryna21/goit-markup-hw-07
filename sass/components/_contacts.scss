@@ -1,0 +1,44 @@
+.nav-contact {
+  display: flex;
+  margin-left: auto;
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.mail {
+  color: $primary-text-color;
+  transition: color $transition;
+
+  .icon-mail {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+}
+
+.phone {
+  color: $primary-text-color;
+  transition: color $transition;
+
+  .icon-phone {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+}
