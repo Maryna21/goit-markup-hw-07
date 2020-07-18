@@ -33,6 +33,10 @@
   margin-bottom: 30px;
 }
 
+.form-field {
+  position: relative;
+}
+
 .form-input {
   display: block;
   position: relative;
@@ -48,10 +52,6 @@
 
 .first-form-input {
   margin-top: 30px;
-}
-
-.form-field {
-  position: relative;
 }
 
 .form-icon {
@@ -73,12 +73,12 @@
   top: 12px;
   font-size: 12px;
   transition: transform $transition, color $transition;
-}
 
-.form-input:not(:placeholder-shown) ~ .text-form,
-.form-input:focus ~ .text-form {
-  transform: translateY(-33px) translateX(0);
-  left: 19px;
+  .form-input:not(:placeholder-shown) ~ &,
+  .form-input:focus ~ & {
+    transform: translateY(-33px) translateX(0);
+    left: 19px;
+  }
 }
 
 .comment {
@@ -101,27 +101,21 @@
   top: 12px;
   font-size: 14px;
   transition: transform $transition, color $transition;
-}
 
-.comment:not(:placeholder-shown) ~ .text-comment,
-.comment:focus ~ .text-comment {
-  transform: translateY(-33px) translateX(0);
-  left: 19px;
-  color: $accent-color;
-}
-
-.modal-link {
-  color: $accent-color;
-}
-
-.check {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  .comment:not(:placeholder-shown) ~ &,
+  .comment:focus ~ & {
+    transform: translateY(-33px) translateX(0);
+    left: 19px;
+    color: $accent-color;
+  }
 }
 
 .field-checkbox {
   position: relative;
+}
+
+.check {
+  appearance: none;
 }
 
 .checkbox {
@@ -132,21 +126,26 @@
   padding-left: 4px;
   border: 2px solid $title-color;
   border-radius: 4px;
-}
 
-.check:checked ~ .checkbox {
-  border-color: $accent-color;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  background-repeat: no-repeat;
+  .check:checked ~ & {
+    border-color: $accent-color;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+  }
 }
 
 .text-checkbox {
   margin-left: 4px;
 }
 
+.modal-link {
+  color: $accent-color;
+}
+
 .btn-modal {
+  @extend %button;
   margin-top: 30px;
   margin-bottom: 40px;
   margin-left: 124px;
@@ -165,10 +164,10 @@
 .icon-close {
   fill: $title-color;
   transition: fill $transition;
-}
 
-.svg-close:hover .icon-close,
-.svg-close:focus .icon-close {
-  fill: $accent-color;
-  cursor: pointer;
+  .svg-close:hover &,
+  .svg-close:focus & {
+    fill: $accent-color;
+    cursor: pointer;
+  }
 }

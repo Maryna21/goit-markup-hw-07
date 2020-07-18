@@ -1,18 +1,25 @@
-.filter-list.list {
+.portfolio-page {
+  @extend %container;
+}
+
+.portfolio-title {
+  @extend %visually-hidden;
+}
+
+.filter.list {
   display: flex;
   justify-content: center;
   padding-top: 94px;
   margin-bottom: 50px;
   list-style: none;
-}
 
-.filter-list .item:not(:last-child) {
-  margin-right: 8px;
+  .item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .menu-nav {
   background-color: $accent-bg-color;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -20,11 +27,11 @@
   border-radius: 0px 0px 4px 4px;
   padding: 6px 22px;
   transition: background-color $transition, color $transition;
-}
 
-.menu-nav:hover,
-.menu-nav:focus {
-  background-color: $accent-color;
-  color: $primary-bg-color;
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-bg-color;
+    cursor: pointer;
+  }
 }

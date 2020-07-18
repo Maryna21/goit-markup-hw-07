@@ -302,7 +302,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-.head-site, .features, .work-section, .team-block, .customers, .footer-box {
+.head-site, .features, .work-section, .team-block, .customers, .footer-box, .portfolio-page {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -310,7 +310,7 @@ h3 {
   margin-right: auto;
 }
 
-.features-title {
+.features-title, .portfolio-title {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -322,7 +322,7 @@ h3 {
   /* added line */
 }
 
-.button.primary, .footer-btn {
+.button.primary, .footer-btn, .btn-modal {
   display: block;
   background-color: #2196f3;
   color: #ffffff;
@@ -915,6 +915,10 @@ header {
   margin-bottom: 30px;
 }
 
+.form-field {
+  position: relative;
+}
+
 .form-input {
   display: block;
   position: relative;
@@ -931,10 +935,6 @@ header {
 
 .first-form-input {
   margin-top: 30px;
-}
-
-.form-field {
-  position: relative;
 }
 
 .form-icon {
@@ -1002,18 +1002,14 @@ header {
   color: #2196f3;
 }
 
-.modal-link {
-  color: #2196f3;
+.field-checkbox {
+  position: relative;
 }
 
 .check {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.field-checkbox {
-  position: relative;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .checkbox {
@@ -1036,6 +1032,10 @@ header {
 
 .text-checkbox {
   margin-left: 4px;
+}
+
+.modal-link {
+  color: #2196f3;
 }
 
 .btn-modal {
@@ -1066,7 +1066,7 @@ header {
   cursor: pointer;
 }
 
-.filter-list.list {
+.filter.list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1078,7 +1078,7 @@ header {
   list-style: none;
 }
 
-.filter-list .item:not(:last-child) {
+.filter.list .item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -1094,14 +1094,13 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-nav:hover,
-.menu-nav:focus {
+.menu-nav:hover, .menu-nav:focus {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
 }
 
-.project-list {
+.projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1111,55 +1110,27 @@ header {
   padding-bottom: 94px;
 }
 
-.project-list .item {
+.projects .item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
-.project-list .item:nth-child(3n) {
+.projects .item:nth-child(3n) {
   margin-right: 0;
 }
 
-.project-list .item:nth-last-child(-n + 3) {
+.projects .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.project-title {
-  color: #212121;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
-  margin: 0;
-}
-
-.text-menu {
-  color: #757575;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.88;
-}
-
-.project-text {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 1.56;
-}
-
-.portfolio-discription {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.project-link.link {
+.project-link {
   display: block;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link.link:hover {
+.project-link:hover {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   cursor: pointer;
@@ -1181,6 +1152,7 @@ header {
   background-color: #2196f3;
   z-index: 2;
   padding: 63px 24px;
+  overflow: hidden;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 0;
@@ -1195,5 +1167,30 @@ header {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.project-text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.portfolio-discription {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.portfolio-discription .title {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.portfolio-discription .filter-name {
+  color: #757575;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.88;
 }
 /*# sourceMappingURL=mail.css.map */
